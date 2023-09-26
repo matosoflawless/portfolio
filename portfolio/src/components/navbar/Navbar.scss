@@ -1,0 +1,78 @@
+.navbar-main-div {
+    background-color: #976565;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    display: flex; // Ensure everything is in a row on desktop
+    justify-content: space-between; // Space out main content
+  
+    &.hide {
+      transform: translateY(-100%);
+    }
+
+    .navbar-mobile-hamburger {
+      display: none; // Hide on larger screens initially
+    }
+  
+    .navbar-links {
+      display: flex; // Display in a row on desktop
+      gap: 20px;
+      align-items: center; // Align vertically
+  
+      .navbar-item {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px; // Some padding for better interaction
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .navbar-actions-div {
+      display: flex;
+      gap: 10px;
+      align-items: center; // Align vertically
+  
+      button {
+        background-color: white;
+        border: none;
+        padding: 5px 10px;
+        color: #333;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
+}
+
+// Mobile styles
+@media screen and (max-width: 768px) {
+    .navbar-main-div {
+      flex-direction: column; // Stack vertically on mobile
+
+      .navbar-mobile-hamburger {
+        display: block; // Display on mobile
+      }
+  
+      .navbar-links {
+        display: none; // Hidden by default on mobile
+        flex-direction: column; // Stack vertically on mobile
+        width: 100%; // Take full width
+        background-color: rgba(0, 0, 0, 0.8); // Dark background
+        padding: 10px 0; // Some padding
+        gap: 10px; // Gap between links
+
+        &.opened {
+          display: flex; // Display when opened
+        }
+      }
+    }
+}

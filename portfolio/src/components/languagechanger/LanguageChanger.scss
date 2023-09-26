@@ -1,0 +1,55 @@
+.language-changer-main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.language-item {
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white; 
+    height: 30px;
+    width: 35px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.language-changer-main-div:hover>.language-item.unselected {
+    transform: translateY(100%);
+    opacity: 1;
+}
+
+
+.language-item.unselected {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.language-item.unselected:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .language-item.unselected {
+        position: relative;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .language-item.selected {
+        background-color: white;
+        color: var(--primary);
+    }
+
+    .language-changer-main-div:hover>.language-item.unselected {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
