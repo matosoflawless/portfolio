@@ -16,7 +16,7 @@ body {
 
 .page-div {
     display: flex;
-    padding-top: var(--navbar-height); // This will push the content down by the height of the navbar
+    padding-top: var(--navbar-height); 
     flex-direction: column;
     
 
@@ -72,8 +72,19 @@ body {
 }
 
 .home-bot {
-
-padding-bottom: 15%;
-
+  display: flex;
+justify-content: center;
+padding-bottom: 5%;
+align-items: center;
 }
 
+.home-bot-text {
+  padding-top: 20%;
+}
+
+.scrollBot-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}

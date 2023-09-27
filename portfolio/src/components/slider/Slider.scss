@@ -1,6 +1,5 @@
 .slider {
     position: relative;
-  
     width: 100%;
     height: auto;
 
@@ -8,13 +7,13 @@
     .arrow-right {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        font-size: 2rem;
         z-index: 10;
-        background-color: rgba(255, 255, 255, 0.5);
+        font-size: 2rem;
+        padding: 5px;
         border-radius: 50%;
-        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transform: translateY(-50%);
         transition: background-color 0.3s;
 
         &:hover {
@@ -23,32 +22,34 @@
     }
 
     .arrow-left {
-        left: 10px;
+        left: 30%;
+        background-color:#0056b3;
     }
 
     .arrow-right {
-        right: 10px;
+        right: 30%;
+        background-color:#0056b3;
     }
 
     .slide {
-       display: flex;
+        display: flex;
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity 0.3s;
         justify-content: center;
+        transition: opacity 0.3s;
 
         &.current {
             opacity: 1;
         }
 
-
         .content {
             display: flex;
-            transform: translateX(-50%);
-            text-align: center;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
+            padding-top: 5%;
+
             p {
                 margin: 0;
                 padding: 0;
@@ -61,21 +62,21 @@
                 }
             }
 
-            button.--btn {
+            .slider-button {
                 margin-top: 10px;
                 padding: 10px 20px;
                 border: none;
                 border-radius: 4px;
+                background-color: rgba(17, 0, 255, 0.8);
+                color: white;
+                font-weight: bold;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                 cursor: pointer;
-                transition: background-color 0.3s;
+                transition: background-color 0.3s, opacity 0.3s;
 
-                &.--btn--primary {
-                    background-color: #007BFF;
-                    color: white;
-
-                    &:hover {
-                        background-color: #0056b3;
-                    }
+                &:hover {
+                    background-color: #0056b3;
+                    opacity: 1;
                 }
             }
         }

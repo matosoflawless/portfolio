@@ -22,11 +22,15 @@ function Home() {
                     Creatures of the night began their enchanted dance,
                     In this ever-evolving, wondrous expanse.
                 </p>
+            </div>
+            <div className="scrollBot-button">
                 <input className="scrollBot-button" type="button" value={"SCROLL FOR MORE"} onClick="document.getElementById('home-bot').scrollIntoView();" />
             </div>
             <div className="home-bot">
-                <p>About my work</p>
-                <Slider/>
+                <p className="home-bot-text">About my work</p>
+            </div>
+            <div>
+                <Slider />
             </div>
 
 
