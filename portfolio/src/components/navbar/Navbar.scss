@@ -24,15 +24,15 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
+    box-shadow: inset 0 0 0 0 #3506b8;
+    color: #5f628d;
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
     .navbar-item {
-      box-shadow: inset 0 0 0 0 #54b3d6;
-      color: #ffffff;
+      box-shadow: inset 0 0 0 0 #3f0088;
+      color: #6311cf;
       margin: 0 -.25rem;
       padding: 0 .25rem;
       transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -45,7 +45,7 @@
       }
 
       &:hover {
-        box-shadow: inset 100px 0 0 0 #54b3d6;
+        box-shadow: inset 100px 0 0 0 #484abd;
         color: white;
       }
     }
@@ -83,22 +83,41 @@
       display: none; // Hidden by default on mobile
       flex-direction: column; // Stack vertically on mobile
       width: 50%; // Take full width
-      background-color: rgba(236, 185, 155, 0.932); // Dark background
+      background-color: rgba(172, 155, 236, 0.932); // Dark background
       padding: 10px 0; // Some padding
       gap: 10px; // Gap between links
       border-radius: 5%;
 
       .navbar-item {
-        color: #54b3d6; // Consistent color on mobile
+        color: #6311cf; // Consistent color on mobile
 
-        &:hover {
-          box-shadow: inset 100px 50px 40px 30px #54b3d6;
-          color: white;
-        }
+      
       }
 
       &.opened {
         display: flex; // Display when opened
+        transform: translateY(40px)translateX(40px);
+      
+
+      }
+    }
+  }
+  .navbar-actions-div {
+    display: flex;
+    gap: 10px;
+    align-items: center; 
+    justify-content: flex-end;
+    transform: translateY(-40px);
+
+    button {
+      background-color: white;
+      border: none;
+      padding: 5px 10px;
+      color: #333;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
       }
     }
   }

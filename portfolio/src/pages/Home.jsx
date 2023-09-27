@@ -1,6 +1,8 @@
 import React from "react";
 
 import "./Home.scss"
+import Slider from "../components/slider/Slider";
+
 
 
 function Home() {
@@ -20,7 +22,11 @@ function Home() {
                     Creatures of the night began their enchanted dance,
                     In this ever-evolving, wondrous expanse.
                 </p>
-                <input className="scrollBot-button" type="button" value={"SCROLL FOR MORE"} onClick="document.getElementById('home-bottom').scrollIntoView();" />
+                <input className="scrollBot-button" type="button" value={"SCROLL FOR MORE"} onClick="document.getElementById('home-bot').scrollIntoView();" />
+            </div>
+            <div className="home-bot">
+                <p>About my work</p>
+                <Slider/>
             </div>
 
 
