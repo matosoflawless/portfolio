@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { Squash as Hamburger } from "hamburger-react";
 // import LanguageChanger from "../languagechanger/LanguageChanger";
@@ -11,7 +11,7 @@ import "./Navbar.scss"
 function Navbar() {
 
 	const routes = [
-		{ label: "Home", to: "/about" },
+		{ label: "Home", to: "/" },
 		{ label: "Projects", to: "/work" },
 		{ label: "Contact", to: "/contacts" },
 	];
@@ -19,7 +19,7 @@ function Navbar() {
         const [showNavbar, setShowNavbar] = useState(true);
         const [lastScrollPos, setLastScrollPos] = useState(0);
     
-        const navigate = useNavigate();
+        
     
         useEffect(() => {
             if (typeof window !== "undefined")

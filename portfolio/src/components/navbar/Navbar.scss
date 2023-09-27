@@ -1,78 +1,105 @@
 .navbar-main-div {
-    background-color: #976565;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transition: transform 0.3s ease-in-out;
-    display: flex; // Ensure everything is in a row on desktop
-    justify-content: space-between; // Space out main content
-  
-    &.hide {
-      transform: translateY(-100%);
-    }
+  background: linear-gradient(90deg, #8f70d8 0%,#9e8deb 30%,#f3d276 67%, #c94e15 100%);
+  background-size: 1000%;
+  animation: background 20s linear alternate infinite;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  height: var(--navbar-height);
 
-    .navbar-mobile-hamburger {
-      display: none; // Hide on larger screens initially
-    }
-  
-    .navbar-links {
-      display: flex; // Display in a row on desktop
-      gap: 20px;
-      align-items: center; // Align vertically
-  
-      .navbar-item {
-        text-decoration: none;
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  .navbar-mobile-hamburger {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+    .navbar-item {
+      box-shadow: inset 0 0 0 0 #54b3d6;
+      color: #ffffff;
+      margin: 0 -.25rem;
+      padding: 0 .25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      text-decoration: none;
+
+      padding: 5px 10px; // Some padding for better interaction
+
+      &.active {
+        font-weight: bold;
+      }
+
+      &:hover {
+        box-shadow: inset 100px 0 0 0 #54b3d6;
         color: white;
-        padding: 5px 10px; // Some padding for better interaction
+      }
+    }
+  }
 
-        &.active {
-          font-weight: bold;
-        }
+  .navbar-actions-div {
+    display: flex;
+    gap: 10px;
+    align-items: center; // Align vertically
+
+    button {
+      background-color: white;
+      border: none;
+      padding: 5px 10px;
+      color: #333;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
       }
     }
-  
-    .navbar-actions-div {
-      display: flex;
-      gap: 10px;
-      align-items: center; // Align vertically
-  
-      button {
-        background-color: white;
-        border: none;
-        padding: 5px 10px;
-        color: #333;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #eee;
-        }
-      }
-    }
+  }
 }
 
 // Mobile styles
 @media screen and (max-width: 768px) {
-    .navbar-main-div {
+  .navbar-main-div {
+    flex-direction: column; // Stack vertically on mobile
+
+    .navbar-mobile-hamburger {
+      display: block; // Display on mobile
+    }
+
+    .navbar-links {
+      display: none; // Hidden by default on mobile
       flex-direction: column; // Stack vertically on mobile
+      width: 50%; // Take full width
+      background-color: rgba(236, 185, 155, 0.932); // Dark background
+      padding: 10px 0; // Some padding
+      gap: 10px; // Gap between links
+      border-radius: 5%;
 
-      .navbar-mobile-hamburger {
-        display: block; // Display on mobile
-      }
-  
-      .navbar-links {
-        display: none; // Hidden by default on mobile
-        flex-direction: column; // Stack vertically on mobile
-        width: 100%; // Take full width
-        background-color: rgba(0, 0, 0, 0.8); // Dark background
-        padding: 10px 0; // Some padding
-        gap: 10px; // Gap between links
+      .navbar-item {
+        color: #54b3d6; // Consistent color on mobile
 
-        &.opened {
-          display: flex; // Display when opened
+        &:hover {
+          box-shadow: inset 100px 50px 40px 30px #54b3d6;
+          color: white;
         }
       }
+
+      &.opened {
+        display: flex; // Display when opened
+      }
     }
+  }
 }
