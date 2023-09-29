@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(90deg, #8f70d8 0%,#9e8deb 30%,#f3d276 67%, #c94e15 100%);
+  background: linear-gradient(90deg, #d4cbf0 0%, #ddc8ec 30%, #c4d7eb 67%, #f7e1e5 100%);
+
       background-size: 1000%;
       animation: background 20s linear alternate infinite;
     }
@@ -33,13 +34,13 @@ body {
 
     .home-greeting {
         white-space: pre-wrap;
-        padding: 5%;
+        padding: 5% 5% 0% 5%;
         text-transform: uppercase;
         background-image: linear-gradient(-225deg,
-                #381c9c 0%,
-                #44107a 29%,
-                #11006d 67%,
-                #e75f04 100%);
+                #ae9af0 0%,
+                #e99c9c 29%,
+                #ddae86 67%,
+                #e6dc8b 100%);
         background-size: auto auto;
         background-clip: border-box;
         background-size: 200% auto;
@@ -66,9 +67,7 @@ body {
         font-weight:500;
     }
 
-    .scrollBot-button {
-
-    }
+  
 }
 
 .home-bot {
@@ -80,11 +79,24 @@ align-items: center;
 
 .home-bot-text {
   padding-top: 20%;
+  font-size: 26px;
+  font-weight: 600;
+  color: #381c9c;
 }
 
 .scrollBot-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-bottom: 100px;
+  ;
+  
+  color: #11006d;
+   &:hover {
+    color: white;
+   }
+  
+}
+.slider-div {
+  margin-bottom: 20px;
 }

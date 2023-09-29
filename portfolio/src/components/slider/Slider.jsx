@@ -34,8 +34,6 @@
       if (autoScroll) {
         startAutoSlide();
       }
-
-   
       return () => {
         if (slideInterval) {
           clearInterval(slideInterval);
@@ -61,30 +59,28 @@
 
     return (
       <div className="slider">
-        <AiOutlineArrowLeft className="arrow-left" onClick={previousSlider} />
-        <AiOutlineArrowRight className="arrow-right" onClick={nextSlider} />
-
-        {sliderData.map((slide, index) => {
-          return (
-            <div className={index === current ? "slide current" : "slide"} key={index}>
-              {index === current && (
-                <div>
+        <AiOutlineArrowLeft className="arrow arrow-left" onClick={previousSlider} />
+        <AiOutlineArrowRight className="arrow arrow-right" onClick={nextSlider} />
+    
+        {sliderData.map((slide, index) => (
+          <div className={`slide ${index === current ? 'current' : ''}`} key={index}>
+            {index === current && (
+              <div className="slide-content">
+                <div className="images-div">
                   <img src={slide.img_url} alt="images" />
-                  <div className="content">
-                    <p>{slide.heading}</p>
-                    <p>{slide.description}</p>
-                    <div>
-                  <button className="slider-button">See it!</button>
-                  </div>
-                  </div>
-                
                 </div>
-              )}
-            </div>
-          );
-        })}
+                <div className="content">
+                  <p>{slide.heading}</p>
+                  <p>{slide.description}</p>
+                <button className="slider-button">See it!</button>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     );
+    
   };
 
   export default Slider;

@@ -1,5 +1,5 @@
 .navbar-main-div {
-  background: linear-gradient(90deg, #8f70d8 0%,#9e8deb 30%,#f3d276 67%, #c94e15 100%);
+  background: linear-gradient(90deg, #9488c7 0%, #ad93d3 30%, #d4b1ae 67%, #e7b8c0 100%);
   background-size: 1000%;
   animation: background 20s linear alternate infinite;
   padding: 10px 20px;
@@ -25,27 +25,27 @@
     gap: 20px;
     align-items: center;
     box-shadow: inset 0 0 0 0 #3506b8;
-    color: #5f628d;
+    color: #a0a3d6;
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
     .navbar-item {
       box-shadow: inset 0 0 0 0 #3f0088;
-      color: #6311cf;
+      color: #f6f6f7;
       margin: 0 -.25rem;
       padding: 0 .25rem;
       transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
       text-decoration: none;
 
-      padding: 5px 10px; // Some padding for better interaction
+      padding: 5px 10px;
 
       &.active {
         font-weight: bold;
       }
 
       &:hover {
-        box-shadow: inset 100px 0 0 0 #484abd;
+        box-shadow: inset 100px 0 0 0 #eca4bc;
         color: white;
       }
     }
@@ -54,7 +54,7 @@
   .navbar-actions-div {
     display: flex;
     gap: 10px;
-    align-items: center; // Align vertically
+    align-items: center; 
 
     button {
       background-color: white;
@@ -70,33 +70,36 @@
   }
 }
 
-// Mobile styles
+
 @media screen and (max-width: 768px) {
   .navbar-main-div {
-    flex-direction: column; // Stack vertically on mobile
+    flex-direction: column; 
 
     .navbar-mobile-hamburger {
-      display: block; // Display on mobile
+      z-index: 5;
+      display: block; 
     }
 
     .navbar-links {
-      display: none; // Hidden by default on mobile
-      flex-direction: column; // Stack vertically on mobile
-      width: 50%; // Take full width
-      background-color: rgba(172, 155, 236, 0.932); // Dark background
-      padding: 10px 0; // Some padding
-      gap: 10px; // Gap between links
+      display: none; 
+      flex-direction: column; 
+      width: 50%;
+      background-color: rgba(172, 155, 236, 1); 
+      padding: 10px 0; 
+      gap: 5px; 
       border-radius: 5%;
+      z-index: 6;
 
       .navbar-item {
-        color: #6311cf; // Consistent color on mobile
+        color: #6f62b9; 
 
       
       }
 
       &.opened {
-        display: flex; // Display when opened
-        transform: translateY(40px)translateX(40px);
+        display: flex; 
+        transform: translateY(0px)translateX(40px);
+        height: fit-content;
       
 
       }

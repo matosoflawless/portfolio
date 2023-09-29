@@ -71,7 +71,7 @@ function Navbar() {
                                 <p>{route.label}</p>
                             </NavLink>
                         ))}
-                        {/* for mobile */}
+                    
                         <div className="navbar-actions-div-mobile">
                         
                         </div>
