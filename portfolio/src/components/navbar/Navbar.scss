@@ -1,5 +1,5 @@
 .navbar-main-div {
-  background: linear-gradient(90deg, #9488c7 0%, #ad93d3 30%, #d4b1ae 67%, #e7b8c0 100%);
+  background: linear-gradient(90deg, #f6f6f7 0%, #59585a 30%, #e7e7e7 67%, #2b2a2a 100%);
   background-size: 1000%;
   animation: background 20s linear alternate infinite;
   padding: 10px 20px;
@@ -24,15 +24,15 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    box-shadow: inset 0 0 0 0 #3506b8;
-    color: #a0a3d6;
+    box-shadow: inset 0 0 0 0 #070707;
+    color: #030303;
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
     .navbar-item {
-      box-shadow: inset 0 0 0 0 #3f0088;
-      color: #f6f6f7;
+      box-shadow: inset 0 0 0 0 #080808;
+      color: #0e0e0f;
       margin: 0 -.25rem;
       padding: 0 .25rem;
       transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -45,7 +45,7 @@
       }
 
       &:hover {
-        box-shadow: inset 100px 0 0 0 #eca4bc;
+        box-shadow: inset 100px 0 0 0 #686767;
         color: white;
       }
     }
@@ -77,14 +77,14 @@
 
     .navbar-mobile-hamburger {
       z-index: 5;
-      display: block; 
+      display:block; 
     }
 
     .navbar-links {
       display: none; 
       flex-direction: column; 
       width: 50%;
-      background-color: rgba(172, 155, 236, 1); 
+      background-color: rgb(219, 219, 219); 
       padding: 10px 0; 
       gap: 5px; 
       border-radius: 5%;
@@ -106,11 +106,12 @@
     }
   }
   .navbar-actions-div {
-    display: flex;
+    
     gap: 10px;
     align-items: center; 
     justify-content: flex-end;
     transform: translateY(-40px);
+    margin-left: 50%;
 
     button {
       background-color: white;

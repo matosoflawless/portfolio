@@ -30,7 +30,7 @@
         font-size: 41px;
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
-        background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+        background: -webkit-linear-gradient(right, #818181, #000000, #929191, #020202);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -64,7 +64,7 @@
       .input-data input:valid ~ label, .textarea textarea:valid ~ label{
         transform: translateY(-20px);
         font-size: 14px;
-        color: #3498db;
+        color: #727272;
         
       }
       .textarea textarea{
@@ -96,7 +96,7 @@
         content: "";
         height: 2px;
         width: 100%;
-        background: #3498db;
+        background: #444444;
         transform: scaleX(0);
         transform-origin: center;
         transition: transform 0.3s ease;
@@ -117,7 +117,7 @@
         width: 300%;
         position: absolute;
         left: -100%;
-        background: -webkit-linear-gradient(right, #6f53e9, #9d7ba8, #896adf, #ce618b);
+        background: -webkit-linear-gradient(right, #757575, #000000, #868686, #000000);
         transition: all 0.4s;
       }
       .submit-btn .input-data:hover .inner{

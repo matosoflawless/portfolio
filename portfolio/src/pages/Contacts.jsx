@@ -74,6 +74,8 @@ function Contacts() {
                         <div className="input-data">
                             <div className="inner"></div>
                             <input type="submit" value="submit" />
+
+                            {/* react snackbar procurar */}
                         </div>
                     </div>
                 </form>

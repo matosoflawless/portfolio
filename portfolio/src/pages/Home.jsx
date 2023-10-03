@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
+
+
 import "./Home.scss";
 import Slider from "../components/slider/Slider";
+
 
 function Home() {
   
@@ -28,6 +31,8 @@ function Home() {
           In this ever-evolving, wondrous expanse.
         </p>
       </div>
+   
+  
       <div className="scrollBot-button">
         <ArrowDropDownCircleIcon onClick={handleButtonClick}/>
        
@@ -41,6 +46,7 @@ function Home() {
         <Slider />
       </div>
     </div>
+    
   );
 }
 
